@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tabloncito Digital</title>
+    <link rel="icon" href="img/consola.png" type="image/x-icon">
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- NAVEGACION -->
+        <div class="nav container">
+            <a href="#" class="logo"><span>T</span>abloncito</a>
+            <a href="#" class="logopng"><img src="img/consola.png" alt=""></a>
+            
+            <!-- CART ICONS -->
+            <i class="bx bx-shopping-bag" id="cart-icon"></i>
+
+            <!-- CART -->
+            <div class="cart" id="cart">
+                <h2 class="cart-title ">Tu carrito</h2>
+
+            
+
+                <!-- CONTENT -->
+                <div class="cart-content">
+
+
+                </div>
+
+                <!-- TOTAL -->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div>
+                </div>
+
+                <!-- BUY BOTTON -->
+                <button type="button" class="btn-buy" onclick="comprarAhora()">Comprar Ahora!</button>
+
+<script>
+function comprarAhora() {
+  // Número de WhatsApp al que se enviará el mensaje
+  var numeroWhatsApp = "+573016520610";
+  
+  // Mensaje predeterminado
+  var mensaje = "Hola, quiero comprar esto:\n\n";
+  
+  // Obtener todos los elementos que representan los productos en el carrito
+  var productos = document.querySelectorAll('.cart-box');
+  
+  // Recorrer todos los productos y agregar sus títulos, cantidades y precios individuales al mensaje
+  productos.forEach(function(producto) {
+    var titulo = producto.querySelector('.cart-product-title').textContent;
+    var cantidad = producto.querySelector('.cart-quantity').value;
+    var precioUnitario = producto.querySelector('.cart-price').textContent;
+    mensaje += titulo.trim() + " - Cantidad: " + cantidad + " - Precio Unitario: " + precioUnitario + "\n";
+  });
+  
+  // Obtener el precio total
+  var totalPrice = document.querySelector('.total-price').textContent;
+  
+  // Agregar el precio total al mensaje
+  mensaje += "\nTotal: " + totalPrice.trim();
+  
+  // Crear la URL para abrir WhatsApp con el mensaje predefinido
+  var urlWhatsApp = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
+  
+  // Redirigir a la URL de WhatsApp
+  window.location.href = urlWhatsApp;
+}
+</script>
+
+
+
+                <!-- CART CLOSE -->
+                <i class="bx bx-x" id="cart-close"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- SHOP SECTION -->
+    <section class="shop container">
+        <h2 class="section-title">Nuestros Productos</h2>
+
+        <div class="button-container">
+            <a href="accesorios..html" class="button">Accesorios</a>
+            <a href="index.html" class="button">Papeleria</a>
+            <a href="#" class="button">jugueteria</a>
+          </div>
+          
+          <style>
+          .button-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 100%;
+          }
+          
+          .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+          }
+          
+          @media (max-width: 600px) {
+            .button-container {
+              flex-direction: column;
+              align-items: stretch;
+            }
+          
+            .button {
+              margin: 5px 0;
+              width: 100%;
+            }
+          }
+          </style>
+          
+<bR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- CONTENT -->
+        <div class="shop-content">
+
+            <!-- BOX 1 -->
+                <div class="product-box" class="Iphone15ProMax">
+                    <img src="img/iphone.png" alt="" class="product-img">
+                    <a href="iphone15promax/index.html" class="product-link">
+                        <span class="product-title">Archivador Offi Oficio OE456</span>
+                    </a><br>    
+                    <span class="product-price"> $ 15,750 
+                    </span>
+                    <i class="bx bx-shopping-bag add-cart styleaddcartshop"></i>
+                </div>
+
+
+                <!-- BOX 2 -->
+                <div class="product-box">
+                    <img src="img/AppleWatch.png" alt="" class="product-img">
+                    <a href="applewatchseries7/index.html" class="product-link">
+                        <span class="product-title">Block Arcoiris Carta Scribe 35H (50)</span>
+                    </a><br>
+                    <span class="product-price"> $ 3,005 
+                    </span>
+                    <i class="bx bx-shopping-bag add-cart styleaddcartshop"></i>
+                </div>
+
+                    <!-- BOX 3 -->
+                    <div class="product-box">
+                        <img src="img/ControlXboxOne.png" alt="" class="product-img">
+                        <a href="mandoxboxone/index.html" class="product-link">
+                            <span class="product-title">Block Carta Fabri Cuadros 70 H (50)</span>
+                        </a><br>
+                        <span class="product-price"> $ 2,465 
+                        </span>
+                        <i class="bx bx-shopping-bag add-cart styleaddcartshop"></i>
+                    </div>
+
+                        <!-- BOX 4 -->
+                        <div class="product-box">
+                            <img src="img/SamsungS24Ultra.png" alt="" class="product-img">
+                            <a href="samsungs24ultra/index.html" class="product-link">
+                                <span class="product-title">Block Carta Fabri Lineas</span>
+                            </a><br>
+                            <span class="product-price">$2,640</span>
+                            <i class="bx bx-shopping-bag add-cart styleaddcartshop"></i>
+                        </div>
+                        
+                            <!-- BOX 5 -->
+                            <div class="product-box">
+                                <img src="img/Block-Carta-Sin-Rayado-Qnota-70.png" alt="" class="product-img">
+                                <a href="samsungwatch5/index.html" class="product-link">
+                                    <span class="product-title">Block Carta Fabri Liso*70 hojas</span>
+                                </a><br>
+                                <span class="product-price"> $ 2,465 
+                                </span>
+                                <i class="bx bx-shopping-bag add-cart styleaddcartshop"></i>
+                            </div>
+
+                                <!-- BOX 6 -->
+                                <div class="product-box">
+                                    <img src="img/Block-Carta-Sry-Qnota-70H-50U-SCRIBE.png" alt="" class="product-img">
+                                    <a href="mandops5/index.html" class="product-link">
+                                        <span class="product-title">Block Carta Qnota Lineas 70h (50)</span>
+                                    </a><br>
+                                    <span class="product-price">$2,800</span>
+                                    <i class="bx bx-shopping-bag add-cart styleaddcartshop"></i>
+                                </div>
+
+                                    <!-- BOX 7 -->
+                                    <div class="product-box">
+                                        <img src="img/boligrafo-escarchado-lineazul-bstx12-colores-removebg-preview.png" alt="" class="product-img">
+                                        <a href="tecladosteelseries/index.html" class="product-link">
+                                            <span class="product-title">Boligrafo Escarchado GIGO 12 UND GS-0101 (192)</span>
+                                        </a> <br>
+                                        <span class="product-price">$7,600</span>
+                                        <i class="bx bx-shopping-bag add-cart styleaddcartshop"></i>
+                                    </div>
+
+                                        <!-- BOX 8 -->
+                                        <div class="product-box">
+                                            <img src="img/lapiceros-azul-eterna-et681_1__1_-removebg-preview.png" alt="" class="product-img">
+                                            <a href="mousegpro/index.html" class="product-link">
+                                                <span class="product-title">BOLIGRAFO ETERNA 0.7 mm TAPA AZUL</span>
+                                            </a><br>
+                                            <span class="product-price">$800</span>
+                                            <i class="bx bx-shopping-bag add-cart styleaddcartshop"></i>
+                                        </div>
+
+        </div>
+
+    </section>
+
+    <!-- link js -->
+    <script src="app.js"></script>
+</body>
+</html>
