@@ -365,6 +365,6 @@ i.bx-shopping-bag {
     position: absolute; /* Establece la posición absoluta */
     top: 76%; /* Alinea el icono verticalmente */
     left: 80%; /* Alinea el icono horizontalmente */
-    transform: translate(-350%, -765%); /* Mueve el icono */
+    transform: translate(-350%, -296%); /* Mueve el icono */
     opacity: 5.8; /* Hace que el ícono sea ligeramente transparente */
 }
