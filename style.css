@@ -361,9 +361,10 @@ a:hover {
 }
 
 i.bx-shopping-bag {
-    font-size: 25px; /* Tamaño deseado en píxeles */
+    font-size: 35px; /* Tamaño deseado en píxeles */
     position: absolute; /* Establece la posición absoluta */
-    top: 82%; /* Alinea el icono verticalmente en el centro */
-    left: 80%; /* Alinea el icono horizontalmente en el centro */
-    transform: translate(-30%, -125%); /* Mueve el icono hacia arriba y hacia la izquierda en la mitad de su tamaño */
+    top: 76%; /* Alinea el icono verticalmente */
+    left: 80%; /* Alinea el icono horizontalmente */
+    transform: translate(-350%, -765%); /* Mueve el icono */
+    opacity: 5.8; /* Hace que el ícono sea ligeramente transparente */
 }
