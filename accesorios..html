@@ -30,6 +30,8 @@
 
             <!-- CART -->
             <div class="cart" id="cart">
+                <br>
+
                 <h2 class="cart-title ">Tu carrito</h2>
 
             
@@ -45,6 +47,8 @@
                     <div class="total-title">Total</div>
                     <div class="total-price">$0</div>
                 </div>
+
+
 
                 <!-- BUY BOTTON -->
                 <button type="button" class="btn-buy" onclick="comprarAhora()">Comprar Ahora!</button>
@@ -82,11 +86,35 @@ function comprarAhora() {
 }
 </script>
 
+<!-- Botón para cerrar la tienda temporalmente -->
+<button id="cart-close" class="boton-cerrar" onclick="cerrarTienda()">Seguir Comprando</button>
+
+<style>
+    .boton-cerrar {
+      padding: 10px 20px;
+      background-color: #f44336; /* Color de fondo del botón */
+      color: white; /* Color del texto del botón */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    .boton-cerrar:hover {
+      background-color: #c62828; /* Color de fondo del botón al pasar el cursor sobre él */
+    }
+    </style>
+    
 
 
-                <!-- CART CLOSE -->
-                <i class="bx bx-x" id="cart-close"></i>
+            
+
+
+
+                
             </div>
+
+            
         </div>
     </header>
 
